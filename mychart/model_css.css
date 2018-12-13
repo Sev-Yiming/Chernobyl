@@ -1,0 +1,26 @@
+.link02{
+	position: fixed;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	margin-right: 0;
+	margin-left: 80.3%;
+	margin-top: 0.3%;
+	font: 15px Lucida Console, monospace;
+	/*font-size: 14px;*/
+}
+.link02:hover{
+	color: rgb(180,180,180);
+	text-decoration: none;
+}
+.link02:active{
+	color: rgb(120,120,120);
+	text-decoration: none;
+}
+#homepage02{
+
+}
+#model02{
+	margin-left: 90.4%;
+
+}

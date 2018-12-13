@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <script src="three.js"></script>
+    <script src="TrackballControls.js"></script>
+    <script src="TDSLoader.js"></script>
+    <script src="js/index.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="deco.css">
+  <title>My Chart.js Chart</title>
+
+</head>
+<body style="background-color:black;">
+<!--    <div id="circle"></div> -->
+  <A HREF = "index.html" class="link" id="homepage01">HOMEPAGE</A>
+  <A HREF = "modelpage.html" class="link" id="model01">GO VIRTUAL</A>
+  <img src="rasters/bkgrd.png" alt="BackgroundImg" id="BackgroundImg">
+  <img src="rasters/ChernobylTitle.png" alt="ChernobylTitle"  id="titleImage">
+  <div class="container">
+
+    <canvas id="myChart"></canvas>
+     <!-- <svg width="800" height="300" id="rect01"> -->
+
+<div style="position:relative">
+ <canvas id="myChart02"></canvas>
+   
+    <!-- <img src="rasters/cher-01.png" alt="ChernobylDateFeb"  id="FebInfo"> -->
+    <!-- <svg width="80" height="30" id="rect01"> -->
+<span id="rect1" ></span>
+<span id="rect2" ></span>
+<span id="rect4" ></span>
+<span id="rect5" ></span>
+<span id="rect3" ></span>
+<span id="rect6" ></span>
+<span id="rect7" ></span>
+<span id="rect8" ></span>
+<span id="rect9" ></span>
+<span id="rect10" ></span>
+
+
+</div>
+
+<img src="rasters/ChernobylMap-01.png" alt="ChernobylMap" id="chernobyl_map">
+
+<!-- </svg> -->
+  </div>
+ 
+
+  <script>
+    let myChart = document.getElementById('myChart').getContext('2d');
+    let myChart02 = document.getElementById('myChart02').getContext('2d');
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let massPopChart = new Chart(myChart, {
+      type:'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:['1970:Construction of the town of Pripyat, one of 9 “atom towns” begins, to be inhabited by future employees of the nuclear power plants.', 
+                '1971', 
+                '1972:Discussions take place in Kiev about the type of nuclear plant to be built at Chernobyl.', 
+                '1973', 
+                '1974', 
+                '1975',
+                '1976:October – Filling of the cooling water reservoir for the Chernobyl Power Plant begins.', 
+                '1977:The first of the Chernobyl Nuclear Power Plants four reactors is ready to operate followed by number 2 in 1978.', 
+                '1978', 
+                '1979:Pripyat officially proclaimed as a city.', 
+                '1980',
+                '1980', 
+                '1981', 
+                '1982:A partial core meltdown occurs in reactor No. 1. The reactor was repaired and put back into operation within months.', 
+                '1983:December – The construction of Unit 4 at Chernobyl is completed and the plant becomes operational on the 20th.', 
+                '1984', 
+                '1985:April – The Minister of Energy, decrees that information on any adverse effects caused by the functioning of the energy industry on employees.',
+                '1986', 
+                '1987:March – Vladimir Chevchenko, a Russian filmmaker who documented much of the early response to the disaster dies due to radiation sickness.', 
+                '1988:Norway increases the limit for caesium in reindeer meat for consumption to 6000 Bq/kg. This is extremely high.', 
+                '1989', 
+                '1990',
+                '1991:October - A fire breaks out in the turbine hall of Reactor 2. The fire began in Turbine 4 while it was idle for repairs. A faulty switch caused a surge of current to the turbine, igniting insulating material on some electrical wiring.', 
+                '1992:The Ukraine Government hold an international competition for proposals to replace the hastily constructed sarcophagus over reactor 4.', 
+                '1993:December 15th - Reactor 3, the last functioning reactor, is shut down', 
+                '1994', 
+                '1995',
+                '1996', 
+                '1997', 
+                '1998', 
+                '1999', 
+                '2000',
+                '2001',
+                '2002',
+                '2003',
+                '2004',
+                '2005',
+                '2006',
+                '2007:17 September – The project contract for the New Safe Confinement is finally signed, with French consortium Novarka constructing the 150 by 257 meter arched structure.',
+                '2008:On October 31, 2008, four residents of the Kyiv region were found guilty of trying to removed 15 tons of contaminated, radioactive scrap metal from the Chernobyl Exclusion Zone.',
+                '2009',
+                '2010',
+                '2011:February - Ukraine’s Emergencies Ministry officially began licensing tourist trips . Later in June, the zone is closed to tourists as trips are suspended.',
+                '2012',
+                '2013:January 19th - Pripyat is re-opened to tourists. The dispute is resolved, but the cost of entry is raised $130.',
+                '2014',
+                '2015:July 24th - The two halves of the New Safe Confinement are brought together. Because of its enormous dimensions the arch was built in two sections. 1,000 bolts join the sections together.',
+                '2016',
+                '2017:Estimated completion date of the New Safe Confinement Shelter over reactor 4.'
+                ],
+        datasets:[{
+          // label:[],
+          data:[1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          //backgroundColor:'green',
+          backgroundColor:'rgba(0,0,0,100)',
+          borderWidth:1,
+          borderColor:'rgba(255,255,255,100)',
+          hoverBorderWidth:3,
+          hoverBackgroundColor:'rgba(255,255,255,100)',
+          hoverBorderColor:'rgba(255,255,255,100)'
+        }]
+      },
+      options:{
+        title:{
+          display:false,
+          // text:'Largest Cities In Massachusetts',
+          fontSize:25
+        },
+        cutoutPercentage: 97,
+        aspectRatio: 0.6,
+        maintainAspectRatio : true,
+        legend:{
+          display:false,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:0,
+            right:0,
+            bottom:0,
+            top:200
+          }
+        },
+        tooltips: {
+                callbacks: {
+        title: function(tooltipItem, data) {
+          return data['labels'][tooltipItem[0]['index']];
+        },
+        label: function(tooltipItem, data) {
+          return data['datasets'][0]['data'][tooltipItem['']];
+        }
+      }
+            }
+      }
+    });
+
+    let massPopChart02 = new Chart(myChart02, {
+      type:'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:[
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+                'August',
+                'September',
+                'October',
+                'November',
+                'December'
+                ],
+        datasets:[{
+          label:[],
+          data:[
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+          ],
+          //backgroundColor:'green',
+          backgroundColor:'rgba(0,0,0,100)',
+          borderWidth:1,
+          borderColor:'rgba(255,255,255,100)',
+          hoverBorderWidth:3,
+          hoverBorderColor:'rgba(255,255,255,100)',
+          hoverBackgroundColor:'rgba(255,255,255,100)'
+        }]
+      },
+      options:{
+        title:{
+          display:true,
+          // text:'Darkest Hour - Chernobyl',
+          fontSize:25
+        },
+        cutoutPercentage: 95,
+        rotation: -0.5 * Math.PI,
+        circumference: 1* Math.PI,
+        aspectRatio: 1.3,
+        maintainAspectRatio : true,
+        legend:{
+          display:false,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:0,
+            right:0,
+            bottom:0,
+            top:0
+          },
+          margin:{
+            left:0,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips: {
+                callbacks: {
+        title: function(tooltipItem, data) {
+          return data['labels'][tooltipItem[0]['index']];
+        },
+        label: function(tooltipItem, data) {
+          return data['datasets'][0]['data'][tooltipItem['']];
+        }
+      }
+            }
+      }
+    });
+
+    
+
+
+  </script>
+</body>
+</html>
